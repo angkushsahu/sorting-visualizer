@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+   background-image: linear-gradient(to right, #434343 0%, black 100%);
+   color: #ffffff;
+}
+
+@layer utilities {
+   .default-line-color {
+      @apply bg-orange-500;
+   }
+
+   .change-line-color {
+      @apply bg-green-600;
+   }
+}
+
+@keyframes pulse {
+   0%,
+   100% {
+      opacity: 1;
+   }
+   50% {
+      opacity: 0;
+   }
+}
+
+.pulse-animation {
+   animation: pulse 1s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
